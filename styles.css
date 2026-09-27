@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Brand / Primary */
+    --color-primary: #6500FF;
+    --color-primary-hover: #5200cc;
+
+    /* Sfondi */
+    --color-bg-page: #FFFFFF;
+    --color-bg-card: #FFFFFF;
+    --color-bg-badge: #E3E3E3;
+
+    /* Testi */
+    --color-text-main: #000000;
+    --color-text-muted: #808080;
+    --color-text-light: #FFFFFF;
+    --color-text-light-muted: rgba(255, 255, 255, 0.85);
+
+    /* Elementi di controllo & Bordi */
+    --color-toggle-active: #000000;
+    --color-toggle-inactive: #808080;
+
+    /* Ombreggiature & Raggi di curvatura */
+    --card-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    --card-radius: 20px;
+    --btn-radius: 12px;
+    --badge-radius: 6px;
+}
+
+
+body {
+    min-height: 100vh;
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-bg-page);
+}
+
+header {
+    margin-bottom: 24px;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+#page-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: var(--color-toggle-active);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--color-toggle-active);
+}
+
+input:checked+.slider::before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.switcher {
+    display: flex;
+    gap: 1rem;
+    padding-top: 0.8rem;
+}
