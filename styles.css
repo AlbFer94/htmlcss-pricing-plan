@@ -12,7 +12,7 @@
     --color-primary-hover: #5200cc;
 
     /* Sfondi */
-    --color-bg-page: #FFFFFF;
+    --color-bg-page: #F5F5F5;
     --color-bg-card: #FFFFFF;
     --color-bg-badge: #E3E3E3;
 
@@ -27,7 +27,7 @@
     --color-toggle-inactive: #808080;
 
     /* Ombreggiature & Raggi di curvatura */
-    --card-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    --card-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
     --card-radius: 20px;
     --btn-radius: 12px;
     --badge-radius: 6px;
@@ -113,4 +113,65 @@ input:checked+.slider::before {
     display: flex;
     gap: 1rem;
     padding-top: 0.8rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--color-bg-card);
+    padding: 1.2rem;
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+}
+
+#professional {
+    background-color: var(--color-primary-hover);
+    color: var(--color-text-light);
+}
+
+#professional .plan-info button {
+    background-color: var(--color-bg-card);
+    color: var(--color-primary-hover);
+    font-weight: bold;
+}
+
+.plan-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.plan-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.plan-info button {
+    border-radius: var(--btn-radius);
+    padding: 0.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    font-weight: 600;
+}
+
+p span {
+    background-color: var(--color-text-muted);
+    border-radius: var(--badge-radius);
+    padding: 0.5rem;
+}
+
+.plan-description {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    line-height: 2;
 }
