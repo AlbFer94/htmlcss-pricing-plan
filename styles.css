@@ -29,32 +29,50 @@
     /* Ombreggiature & Raggi di curvatura */
     --card-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
     --card-radius: 20px;
-    --btn-radius: 12px;
-    --badge-radius: 6px;
+    --btn-radius: 16px;
+    --badge-radius: 8px;
 }
 
 
 body {
     min-height: 100vh;
     font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
     line-height: 1.6;
     background-color: var(--color-bg-page);
 }
 
 header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 24px;
+    font-size: 1.5rem;
 }
 
 .header-nav {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     padding: 1rem;
 }
 
 #page-title {
     display: flex;
     flex-direction: column;
+    letter-spacing: -0.02em;
+
 }
+
+#page-title h1 {
+    font-weight: 700;
+}
+
+#page-title p {
+    color: var(--color-text-muted);
+    font-weight: 400;
+}
+
 
 .switch {
     position: relative;
@@ -118,14 +136,20 @@ input:checked+.slider::before {
 .container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1.5rem;
+    margin-bottom: 80px;
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--color-bg-card);
-    padding: 1.2rem;
+    padding: 1.5rem;
     border-radius: var(--card-radius);
     box-shadow: var(--card-shadow);
+    font-size: 1.2rem;
 }
 
 #professional {
@@ -145,6 +169,7 @@ input:checked+.slider::before {
     justify-content: flex-start;
     line-height: 1;
     margin-bottom: 1rem;
+    font-size: 0.8.rem;
 }
 
 .plan-info {
@@ -153,14 +178,28 @@ input:checked+.slider::before {
     text-align: center;
     gap: 1rem;
     margin-bottom: 0.8rem;
+    font-size: 1.6rem;
 }
 
 .plan-info button {
     border-radius: var(--btn-radius);
-    padding: 0.5rem;
+    border: none;
+    padding: 1rem 0;
     background-color: var(--color-primary);
     color: var(--color-text-light);
     font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 0.3rem;
+}
+
+.plan-info h3 {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+h3 span {
+    font-size: 1.2rem;
+    margin-right: 0.2rem;
 }
 
 p span {
@@ -172,6 +211,7 @@ p span {
 .plan-description {
     display: flex;
     flex-direction: column;
-    padding: 0.5rem;
+    padding: 1rem;
     line-height: 2;
+    font-size: 1.5rem;
 }
