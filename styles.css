@@ -143,7 +143,7 @@ header {
 .card {
     flex: 0 1 350px;
     /*NON cresce (grow), si rimpicciolisce (shrink), base 350px */
-
+    min-width: 350px;
     margin: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -221,9 +221,21 @@ p span {
     font-size: 1.5rem;
 }
 
-@media screen and (max-width:1032px) {
+@media screen and (min-width:768px) and (max-width:1032px) {
     #ultimate {
         flex: 1 1 100%;
         margin: 1.2rem;
+    }
+
+    #ultimate .plan-info button {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    #ultimate .plan-description {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 60%;
     }
 }
